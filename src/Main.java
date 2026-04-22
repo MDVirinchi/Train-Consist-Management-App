@@ -1,22 +1,34 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    import java.util.ArrayList;
-import java.util.List;
+import java.util.ArrayList;
 
-    public class TrainConsistApp {
+public class TrainConsistApp {
 
-        public static void main(String[] args) {
+    public static void main(String[] args) {
 
-            // Welcome message
-            System.out.println("=== Train Consist Management App ===");
+        System.out.println("=== Train Consist Management App ===");
 
-            // Create empty list of bogies
-            List<String> bogies = new ArrayList<>();
+        // Create ArrayList for passenger bogies
+        ArrayList<String> passengerBogies = new ArrayList<>();
 
-            // Display initial bogie count
-            System.out.println("Initial number of bogies: " + bogies.size());
+        // Add bogies
+        passengerBogies.add("Sleeper");
+        passengerBogies.add("AC Chair");
+        passengerBogies.add("First Class");
+
+        // Display bogies after adding
+        System.out.println("After adding bogies: " + passengerBogies);
+
+        // Remove a bogie
+        passengerBogies.remove("AC Chair");
+        System.out.println("After removing AC Chair: " + passengerBogies);
+
+        // Check if Sleeper exists
+        if (passengerBogies.contains("Sleeper")) {
+            System.out.println("Sleeper bogie exists");
+        } else {
+            System.out.println("Sleeper bogie not found");
         }
-    }
+
+        // Final state
+        System.out.println("Final bogie list: " + passengerBogies);
     }
 }
